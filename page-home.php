@@ -14,33 +14,35 @@
 get_header(); ?>
 
   <main id="main" class="site-main" role="main">
-      
-    <div class="container">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <h1><?php the_title();?></h1>
-          <?php the_content(); ?>
-        <?php endwhile; endif; ?>
-
-        <div class="row">
-          <div class="col-home">
-              <?php
-              if (function_exists('dynamic_sidebar')) {
-                  dynamic_sidebar("home-left");
-              } ?>
-          </div>
-          <div class="col-home">
-              <?php
-              if (function_exists('dynamic_sidebar')) {
-                  dynamic_sidebar("home-middle");
-               } ?>
-          </div>
-          <div class="col-home">
-              <?php
-              if (function_exists('dynamic_sidebar')) {
-                  dynamic_sidebar("home-right");
-              } ?>
-          </div>
+    <div class="home-top">      
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+      <?php endwhile; endif; ?>
+    </div>    
+    <div class="container">        
+      <div class="row">
+        <div class="col-three">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/blog.png" alt="">
+            <?php
+            if (function_exists('dynamic_sidebar')) {
+                dynamic_sidebar("home-left");
+            } ?>
         </div>
+        <div class="col-three">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/apps.png" alt="">
+            <?php
+            if (function_exists('dynamic_sidebar')) {
+                dynamic_sidebar("home-middle");
+             } ?>
+        </div>
+        <div class="col-three">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/calendar.png" alt="">
+            <?php
+            if (function_exists('dynamic_sidebar')) {
+                dynamic_sidebar("home-right");
+            } ?>
+        </div>
+      </div>
     </div>                  
 
   </main>

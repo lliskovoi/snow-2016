@@ -29,15 +29,10 @@
 		<header id="masthead" class="site-header clear" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding">
-					<?php twentysixteen_the_custom_logo(); ?>
-				    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					
-					<?php $description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; ?></p>
-					<?php endif; ?>
-				</div>                            
-
+				    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>"></a></h1>					
+				</div>   
+              
+                <div id="header-top">
                 <?php if ( has_nav_menu( 'social' ) ) : ?>
                     <nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentysixteen' ); ?>">
                         <?php
@@ -50,8 +45,9 @@
                             ) );
                         ?>
                     </nav><!-- .social-navigation -->
-                <?php endif; ?>  
-                                                        
+                <?php endif; ?>                      
+                <?php get_search_form(); ?>
+                </div>                  
 			</div><!-- .site-header-main -->
 
             <?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
@@ -66,8 +62,7 @@
                                     'menu_class'     => 'primary-menu',
                                  ) );
                             ?>
-                        </nav><!-- .main-navigation -->
-                        <?php get_search_form(); ?>
+                        </nav><!-- .main-navigation -->                        
                     <?php endif; ?>
 
                 </div><!-- .site-header-menu -->

@@ -12,20 +12,18 @@
 
 		</div><!-- .site-content -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" class="site-footer" role="contentinfo">                          
 			<div class="site-info">
-				<?php
-					/**
-					 * Fires before the twentysixteen footer text for footer customization.
-					 *
-					 * @since Twenty Sixteen 1.0
-					 */
-					do_action( 'twentysixteen_credits' );
-				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- .site-footer -->
+                <ul class="partner-links">
+                  <li><a href="http://idrc.ocadu.ca"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-idrc.png" alt="Inclusive Design Research Centre"></a></li>
+                  <li><a href="http://ocadu.ca"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-ocadu.jpg" alt="OCAD University"></a></li>
+                </ul>              
+                <p><?php bloginfo('name'); ?> is a project of the <a href="http://idrc.ocadu.ca">Inclusive Design Research Centre</a> at <a href="http://ocadu.ca">OCAD University</a>,<br> 
+funded by the <a href="http://www.psbnet.ca/eng/">Provincial Schools Branch, Ontario Ministry of Education</a>.</p>
+				&copy; <?php echo date(Y); ?> <?php bloginfo('name'); ?>. All rights reserved.
+			</div>
+          
+		</footer>
 	</div><!-- .site-inner -->
 </div><!-- .site -->
 

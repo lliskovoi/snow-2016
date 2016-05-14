@@ -2377,7 +2377,7 @@ body.search-no-results .page-header {
 	color: #686868;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	line-height: 1.6153846154;
+	line-height: 1.6153846154;    
 }
 
 .site-info a {
@@ -3941,35 +3941,142 @@ p > video {
 }
 
 /* Custom for SNOW */
-header a {
+body {
+  background: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.1em;
+}
+.site { margin: 0; }
+
+h2, h3, h4, h5 {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+a {
+  color: #0063A5;
+}
+a:focus, a:hover {
+  color: #A4642E;
+  text-decoration: underline;
+}
+
+/* header */
+.site-header {
+  padding-top: 0.5em;
+  padding-bottom: 0;
+}
+
+header a, .social-navigation a {
   text-decoration: none;
 }
 
-.col-home {
-  width: 32.6%;
-  float: left;
-  margin-right: 10px;
-}
-.col-home:last-child {
-  margin-right: 0;
+.site-branding {
+  margin: 0.5em;
 }
 
 .site-header-menu {
-  background-color: antiquewhite;
-  margin-top: 0;
-  padding: 0.5em;
+  margin: 0;
+  padding: 0.5em 0;
+  text-align: center;
 }
 
 nav.main-navigation {
   clear: both;
-  float: left;    
-  margin: 0;
+  display: inline-block;
 }
 
+#header-top {
+  position: absolute;  
+  top: 1.5em;
+  right: 3.5em;
+}
 .social-navigation {
-  margin-top: 2em;
+  float: left;
+  margin-top: 0.25em;
+  margin-right: 0.5em;
 }
-
+.social-navigation a { border: 0; }
 .search-form {
   float: right;
+}
+
+/* home page */
+.home-top {  
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  padding: 1.5em;
+  font-style: italic;
+}
+.home-top p {
+  margin: 0 0 0.5em;
+}
+
+ul.partner-links { 
+  margin: 1em; 
+  display: block;
+}
+ul.partner-links li {
+  display: inline;
+  list-style: none;
+  margin-left: 10px;  
+}
+ul.partner-links img {
+  height: 5.25em;
+  margin-top: 1.5em;
+}
+
+.col-three {
+  width: 32.6%;
+  float: left;
+  margin-right: 10px;
+  padding: 0 2em;
+}
+.col-three:last-child {
+  margin-right: 0;
+}
+.col-three img {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1em;
+  width: 6em;
+}
+.col-three h2 {
+  text-align: center;
+}
+.widget {
+  border-top: 0;
+}
+
+/* side sub-menu */
+.content-area { margin-right: 0; }
+.sidebar {
+  margin: 0.75em 1.5em 0 0;
+  background-color: #efefef;
+  padding: 1em 0.5em;
+}
+.sidebar h3, .sidebar .widget-title { 
+  text-align: center; 
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+.sidebar .submenu {
+  list-style: none
+}
+.sidebar .submenu a {
+  text-decoration: none;
+}
+
+.sidebar-right {
+  margin-right: 0;
+  margin-left: 1.5em;
+}
+
+.site-footer .site-info {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 0.6em;
+  margin-top: 3em;
+  text-align: center;
 }
