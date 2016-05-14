@@ -4001,6 +4001,10 @@ nav.main-navigation {
   float: right;
 }
 
+.fl-prefsEditor-separatedPanel {
+  display: none;
+}
+
 /* home page */
 .home-top {  
   text-align: center;
